@@ -1,8 +1,11 @@
 streamlit
-opencv-python
+opencv-python-headless
 numpy
 Pillow
 matplotlib
-PyYAML
-os
-
+torch
+torchvision
+PyYAML~=6.0.2
+tqdm
+seaborn
+ultralytics
