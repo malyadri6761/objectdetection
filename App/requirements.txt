@@ -4,8 +4,6 @@ opencv-python-headless
 numpy
 Pillow
 matplotlib
-torch
-torchvision
 PyYAML~=6.0.2
 tqdm
 seaborn
