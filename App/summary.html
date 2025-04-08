@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            color:white;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        p {
+            font-size: 16px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Object Detection System Overview</h2>
+
+    <p>
+        I built an <span class="highlight">object detection system</span> using the 
+        <span class="highlight">Pascal VOC 2012 dataset</span> from Kaggle. The model was trained using 
+        <span class="highlight">YOLOv5</span> with Kaggle's GPU acceleration to enhance performance and reduce training time.
+    </p>
+
+    <p>
+        After training, the model weights were exported from the <code>.pt</code> format to the more portable 
+        <span class="highlight">ONNX format</span> to ensure broader compatibility across platforms and inference engines.
+    </p>
+
+    <p>
+        The trained model and outputs were downloaded locally, where 
+        <span class="highlight">OpenCV</span> was used for real-time predictions on 
+        <span class="highlight">images, videos, and live webcam input</span>.
+    </p>
+
+    <p>
+        For accessibility and user interaction, the detection system was integrated into a 
+        <span class="highlight">Streamlit web interface</span> 
+        <span class="highlight">, allowing image uploads and real-time detection directly on mobile devices.
+    </p>
+
+</body>
+</html>

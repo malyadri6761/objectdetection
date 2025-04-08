@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Detection Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .card {
+            display: flex;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .card .text {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card .text h3 {
+            margin: 0 0 10px;
+            color: #2c3e50;
+        }
+
+        .card .text p {
+            color: #555;
+        }
+
+        .card .image-container {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex-direction: column;
+            }
+            .card .image-container {
+                max-height: 300px;
+            }
+        }
+        h3 {
+      text-align: center;
+      color: #333;
+    }
+    .matrix-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    table {
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #ccc;
+      position: relative;
+      cursor: help;
+    }
+    th {
+      background-color: #e8e8e8;
+    }
+    td:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: -1.5em;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #222;
+      color: #fff;
+      padding: 5px 10px;
+      font-size: 12px;
+      white-space: nowrap;
+      border-radius: 4px;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="text">
+            <h3>Confusion_matrix</h3>
+            <div class="matrix-container">
+                <table>
+                  <tr>
+                    <th rowspan="2">Actual<br>Class</th>
+                    <th colspan="2">Predicted Class</th>
+                  </tr>
+                  <tr>
+                    <th>Positive</th>
+                    <th>Negative</th>
+                  </tr>
+                  <tr>
+                    <th>Positive</th>
+                    <td data-tooltip="True Positive (TP): Correctly predicted positive">TP</td>
+                    <td data-tooltip="False Negative (FN): Missed actual positive">FN</td>
+                  </tr>
+                  <tr>
+                    <th>Negative</th>
+                    <td data-tooltip="False Positive (FP): Incorrectly predicted positive">FP</td>
+                    <td data-tooltip="True Negative (TN): Correctly predicted negative">TN</td>
+                  </tr>
+                </table>
+              </div>
+            
+            <p></p>
+        </div>
+        <div class="image-container">
+            <img src="./images/confusion_matrix.png" alt="confusion_matrix">
+        </div>
+    </div>
+
+    
+
+</body>
+</html>
