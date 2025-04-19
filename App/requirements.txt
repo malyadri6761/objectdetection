@@ -1,10 +1,10 @@
 streamlit
-base64
+opencv-python
 opencv-python-headless
 numpy
 Pillow
 matplotlib
-PyYAML~=6.0.2
+PyYAML
 tqdm
 seaborn
 ultralytics
